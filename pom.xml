@@ -23,8 +23,8 @@
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
 		<sonar.host.url>http://18.117.79.2:9000/</sonar.host.url>
-		<sonar.login>cicd-project</sonar.login>  
-		<sonar.login>82e5a93b8d4cb4f03fd8de9895af50bbc249721a</sonar.login>
+		<sonar.login>kayode</sonar.login>  
+		<sonar.login>6fdc3d3af3c6a7786aa182a40ddeeb7da4eb90f7</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
