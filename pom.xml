@@ -96,13 +96,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>LION TECH ACADEMY Releases Nexus Repository</name>
-	      <url> http://3.22.119.251:8081/repository/jenkins-class21-release</url>
+	      <url>http://3.17.134.41:8081/repository/jenkins-class21-repo-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>LION TECH ACADEMY Snapshot Nexus Repository </name>
-	      <url> http://3.22.119.251:8081/repository/jenkins-class21-snapshots/</url>
+	      <url>http://3.17.134.41:8081/repository/jenkins-class21-repo-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
