@@ -108,7 +108,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>kayode-cicd-new-project</finalName>
+		<finalName>Lion-web-application</finalName>
 		
 		<plugins>
 			<plugin>
