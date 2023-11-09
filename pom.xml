@@ -8,7 +8,7 @@
 	
 	<version>0.0.1-SNAPSHOT</version> 
 	
-	<name>class21-web-app</name>
+	<name>kayode-cicd-new-project</name>
 
 	<description>Maven Web Project for Java Project</description>
 
@@ -108,7 +108,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>class21-devops</finalName>
+		<finalName>kayode-cicd-new-project</finalName>
 		
 		<plugins>
 			<plugin>
