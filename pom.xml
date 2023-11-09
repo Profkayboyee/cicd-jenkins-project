@@ -22,9 +22,9 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://3.135.239.37:9000/</sonar.host.url>
-		<sonar.login>liontech</sonar.login>  
-		<sonar.login>1aac91599dc62d16960b034eecc675c100200629</sonar.login>
+		<sonar.host.url>http://18.117.79.2:9000/</sonar.host.url>
+		<sonar.login>cicd-project</sonar.login>  
+		<sonar.login>82e5a93b8d4cb4f03fd8de9895af50bbc249721a</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
