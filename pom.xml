@@ -27,6 +27,8 @@
 		<sonar.login>6ffb993705ca1707fe02bfa2430c1ea5cd8f11c5</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
