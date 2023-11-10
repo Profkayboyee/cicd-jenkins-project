@@ -101,8 +101,8 @@
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>jenkins-class21-repo Snapshot Nexus Repository </name>
-	      <url>http://3.143.113.174:8081/repository/kayode-jekinks-snapshots/</url>
+	      <name>jenkins-class21-repo Snapshot Nexus Repository</name>
+	      <url>http://http://3.143.113.174:8081/repository/kayode-jenkins-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
