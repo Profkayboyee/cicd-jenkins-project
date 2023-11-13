@@ -4,7 +4,7 @@ node{
         git 'https://github.com/Profkayboyee/cicd-jenkins-project.git'
 
     }
-    
+
 
     stage('2test&Buildapp'){
     sh "${mavenHome}/bin/mvn   clean package"
@@ -36,7 +36,7 @@ stage('7Deploy2UAT'){
 
 stage('8Approval&Review+prep4prod'){
     sh "echo  'application is ready for review and prod release' "
-    timeout(time:5, unit 'DAYS'){
+    timeout(time:5, unit: 'DAYS'){
     input message:"App is ready for release to prod, please review and sign up"
     }
 
