@@ -4,6 +4,7 @@ node{
         git 'https://github.com/Profkayboyee/cicd-jenkins-project.git'
 
     }
+    
 
     stage('2test&Buildapp'){
     sh "${mavenHome}/bin/mvn   clean package"
