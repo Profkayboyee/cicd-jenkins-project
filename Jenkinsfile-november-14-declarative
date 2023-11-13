@@ -23,7 +23,7 @@ node('slave_1'){
         sh  "${mavenHome}/bin/mvn     deploy"
     }
 
-    stage('Tomcatdeployment'){
+    stage('TomcatDeployment'){
         deploy adapters: [tomcat9(credentialsId: 'tomcat-deployer', path: '', url: 'http://13.58.76.172:8009/')], contextPath: 'november14-deployment', war: 'target/*war
     }
 
@@ -33,5 +33,26 @@ node('slave_1'){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+    
+
     
