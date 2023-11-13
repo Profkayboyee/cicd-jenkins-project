@@ -1,10 +1,9 @@
 node{
-    def mavenHome = tool name :'maven3.9.5'
+    def mavenHome = tool name:'maven3.9.5'
     stage('1clonecode'){
         git 'https://github.com/Profkayboyee/cicd-jenkins-project.git'
     }
 
-}
 
 stage('2test&Buildapp'){
     sh "${mavenHome}/bin/mvn   clean package"
