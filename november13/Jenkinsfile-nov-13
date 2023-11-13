@@ -1,4 +1,3 @@
-
 node{
     def mavenHome = tool name :'maven3.9.5'
     stage('1clonecode'){
@@ -10,11 +9,11 @@ node{
 stage('2test&Buildapp'){
     sh "${mavenHome}/bin/mvn   clean package"
 }
+
 stage ('3CodeQuality'){
     sh "${mavenHome}/bin/mvn     sonar:sonar"
 }
 stage ('4UploadArrtifacts'){
-    sh "${mavenHome}/bin/mvn     deploy "
 
 }
 
