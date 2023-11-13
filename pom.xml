@@ -24,7 +24,7 @@
 		<log4j.version>1.2.17</log4j.version>
 		<sonar.host.url>http://13.58.76.172:9000/</sonar.host.url>
 		<sonar.login>ifemidetech</sonar.login>  
-		<sonar.login>6ffb993705ca1707fe02bfa2430c1ea5cd8f11c5</sonar.login>
+		<sonar.login>2e9dbc7921658cd55fdd8e50202da3ff001dd41f</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
