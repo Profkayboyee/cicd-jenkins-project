@@ -1,0 +1,57 @@
+node{
+    def  mavenHome = tool name: 'maven3.9.5'
+    stage('1clonecode'){
+        git 'https://github.com/Profkayboyee/lionkay.git'
+
+    }
+
+
+    stage('2test&Buildapp'){
+    sh "${mavenHome}/bin/mvn   clean package"
+}
+
+stage ('3CodeQuality.'){
+    sh "${mavenHome}/bin/mvn     sonar:sonar"
+}
+stage ('4UploadArrtifacts'){
+
+}
+
+stage ('5deploy2evEnv'){
+    sh "echo 'deploying to dev environment'  "
+    deploy adapters: [tomcat9(credentialsId: 'tomcat-deployer', path: '', url: 'http://18.191.153.210:8009/')], contextPath: 'prof', war: 'target/*war'
+
+}
+
+stage('6DeploytoTestENV'){
+    sh "echo    'deploy to Test Environment' "
+    deploy adapters: [tomcat9(credentialsId: 'tomcat-deployer', path: '', url: 'http://18.191.153.210:8009/')], contextPath: 'Test', war: 'target/*war'
+}
+
+stage('7Deploy2UAT'){
+    sh "echo   'deploy to UAT or staging Environment'"
+    deploy adapters: [tomcat9(credentialsId: 'tomcat-deployer', path: '', url: 'http://18.191.153.210:8009/')], contextPath: 'Staging', war: 'target/*war'
+
+}
+
+stage('8Approval&Review+prep4prod'){
+    sh "echo  'application is ready for review and prod release' "
+    timeout(time:5, unit: 'DAYS'){
+    input message:"App is ready for release to prod, please review and sign up"
+    }
+
+}
+
+stage('9Deploy2prod'){
+    sh "sleep 50"
+    deploy adapters: [tomcat9(credentialsId: 'tomcat-deployer', path: '', url: 'http://18.191.153.210:8009/')], contextPath: 'production', war: 'target/*.war'
+}
+
+stage('congratulationforrelease'){
+    echo 'congratulation for LMS v1 prod release'
+}
+
+
+}
+
+
