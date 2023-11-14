@@ -10,7 +10,7 @@ node{
     sh "${mavenHome}/bin/mvn   clean package"
 }
 
-stage ('3CodeQuality'){
+stage ('3CodeQuality.'){
     sh "${mavenHome}/bin/mvn     sonar:sonar"
 }
 stage ('4UploadArrtifacts'){
