@@ -22,7 +22,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://13.58.76.172:9000/</sonar.host.url>
+		<sonar.host.url>http://18.191.153.210:9000/</sonar.host.url>
 		<sonar.login>ifemidetech</sonar.login>  
 		<sonar.login>2e9dbc7921658cd55fdd8e50202da3ff001dd41f</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -96,13 +96,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>jenkins-class21-repo Releases Nexus Repository</name>
-	      <url>http://3.143.113.174:8081/repository/kayode-jenkins-release/</url>
+	      <url>http://3.135.236.34:8081/repository/kayode-jenkins-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>jenkins-class21-repo Snapshot Nexus Repository</name>
-	      <url>http://3.143.113.174:8081/repository/kayode-jenkins-snapshots/</url>
+	      <url>http://3.135.236.34:8081/repository/kayode-jenkins-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
@@ -114,7 +114,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
+				<version>3.9.5</version>
 				<configuration>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
@@ -136,7 +136,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
+				<version>3.9.5</version>
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>

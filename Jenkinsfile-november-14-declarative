@@ -24,7 +24,7 @@ node('slave_1'){
     }
 
     stage('TomcatDeployment'){
-        deploy adapters: [tomcat9(credentialsId: 'tomcat-deployer', path: '', url: 'http://13.58.76.172:8009/')], contextPath: 'november14-deployment', war: 'target/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcat-deployer', path: '', url: 'http://18.191.153.210:8009/')], contextPath: 'november14-deployment', war: 'target/*.war'
     }
 
 
