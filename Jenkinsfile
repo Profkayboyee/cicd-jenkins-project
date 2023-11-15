@@ -12,15 +12,15 @@ node('slave_1'){
     }
 
     stage('MavenBuild'){
-        sh  "${mavenHome}/bin/mvn   clean package"
+        sh  "${mavenHome}/bin/mvn clean package"
     }
 
     stage('SonarqubeAnalysis'){
-        sh  "${mavenHome}/bin/mvn    sonar:sonar"
+        sh  "${mavenHome}/bin/mvn sonar:sonar"
     }
 
     stage('Nexusupload'){
-        sh  "${mavenHome}/bin/mvn     deploy"
+        sh  "${mavenHome}/bin/mvn deploy"
     }
 
     stage('TomcatDeployment'){
