@@ -1,5 +1,7 @@
 node('slave_1'){
-    def maveHome = tool name: "maven3.9.5"
+    tools {
+        maven "maven3.9.5"
+    }
     echo "GitHub BranchName ${env.BRANCH_NAME}"
     echo "Jenkins Job Number ${env.BUILD_NUMBER}"
     echo "Jenkins Node name ${env.NODE_NAME}"
@@ -12,15 +14,15 @@ node('slave_1'){
     }
 
     stage('MavenBuild'){
-        sh  "${mavenHome}/bin/mvn clean package"
+        sh "mvn clean package"
     }
 
     stage('SonarqubeAnalysis'){
-        sh  "${mavenHome}/bin/mvn sonar:sonar"
+        sh "mvn sonar:sonar"
     }
 
     stage('Nexusupload'){
-        sh  "${mavenHome}/bin/mvn deploy"
+        sh "mvn deploy"
     }
 
     stage('TomcatDeployment'){
