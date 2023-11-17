@@ -7,7 +7,7 @@ node()
   }
   stage('2.maven-Build')
   { 
-  sh "echo 'The build has completed.'"
+  sh "${mavenHome}/bin/mvn clean package" /*"echo 'The build has completed.'"*/
   }
   stage('3.CodeQualityReport')
   {
