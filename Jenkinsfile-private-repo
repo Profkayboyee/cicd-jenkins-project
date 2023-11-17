@@ -1,7 +1,7 @@
 node{
     def  mavenHome = tool name: 'maven3.9.5'
     stage('1clonecode'){
-        git 'https://github.com/Profkayboyee/lionkay.git'
+        git 'https:https://github.com/Profkayboyee/lionkay.git'
 
     }
 
