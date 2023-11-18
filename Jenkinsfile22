@@ -3,7 +3,7 @@ node()
    def mavenHome = tool name: 'maven3.9.5'
   stage('1.git clone')
   {
-  git 'https://github.com/Profkayboyee/cicd-jenkins-project.git'
+  git 'https://github.com/liontechacademy/cicd-jenkins-project-kayode.git'
   }
   stage('2.maven-Build')
   { 
