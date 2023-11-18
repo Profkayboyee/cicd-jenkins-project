@@ -1,194 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	           xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-			   http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>	
-	<groupId>com.mt</groupId>
-	<artifactId>maven-web-application</artifactId>
-	<packaging>war</packaging>
- <!--   <version>1.0</version>  -->
-    <version>0.0.1-SNAPSHOT</version> 
-	
-	<name>maven-web-application</name>
-
-	<description>Maven Web Project for Java Project</description>
-
-	<organization>
-		<name>Landmark Technologies</name>
-		<url>http://landmarktechnologies.com/</url>
-	</organization>
-
-	<properties>
-		<jdk.version>1.8</jdk.version>
-		<spring.version>5.1.2.RELEASE</spring.version>
-		<junit.version>4.11</junit.version>
-		<log4j.version>1.2.17</log4j.version>		
-		<sonar.host.url>http://18.220.108.122:5666/</sonar.host.url>
-		<sonar.login>admin</sonar.login>
-		<sonar.password>admin123</sonar.password>
-		
-<!--	
-<sonar.login>51a6e8d01b5259a0328fa455a7737705d6ae91f5</sonar.login>	
-<sonar.password>admin</sonar.password>
--->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
-
-	<dependencies>
-		
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20160212</version>
-		</dependency>
-		
-		<!-- test dependencies -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>1.9.5</version>
-			<scope>test</scope>
-		</dependency>
-
-		<!-- compile dependencies -->
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-    		<groupId>org.springframework</groupId>
-    		<artifactId>spring-web</artifactId>
-    		<version>${spring.version}</version>
-  		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		<!-- provided dependencies -->
-
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
-		</dependency>
-		
-	</dependencies>
-
-<!--
-
-http://3.131.99.16:8081/repository/boa-releases/
-
-http://3.131.99.16:8081/repository/boa-snapshot/
-
--->
-
-	
-	<distributionManagement>
-	    <repository>
-	      <id>nexus</id>
-	      <name>Landmark Technologies Releases Nexus Repository</name>		    
-	      <url>http://18.220.108.122:4000/repository/ebay-ci-releases/</url>
-	    </repository>
-	    
-	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://3.16.82.116:4000/repository/ebay-ci-snapshot/</url>
-	    </snapshotRepository>
-		
-	</distributionManagement>
-	
-	<build>
-		<finalName>maven-web-app</finalName>
-		
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.2.11.v20150529</version>
-				<configuration>
-					<scanIntervalSeconds>10</scanIntervalSeconds>
-					<webApp>
-						<contextPath>/maven-web-application</contextPath>
-					</webApp>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>true</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<wtpContextName>maven-web-application</wtpContextName>
-				</configuration>
-			</plugin>
-			
-</plugins>
-	</build>
-	
-	
-</project>
-
-
-
-
-
-<!--
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.mt</groupId>
-	<artifactId>kay-web-application</artifactId>
+	<artifactId>Lion-web-application</artifactId>
 	<packaging>war</packaging>
 	
-	<version>0.1.0-SNAPSHOT</version> 
+	<version>0.0.1-SNAPSHOT</version> 
 	
-	<name>kayode-cicd-new-project</name>
+	<name>liontech-web-app</name>
 
 	<description>Maven Web Project for Java Project</description>
 
 	<organization>
-		<name>kayode-cicd-new-project</name>
+		<name>Lion Technologies</name>
 		<url>http://Lion technologies.com/</url>
 	</organization>
 
@@ -197,9 +22,9 @@ http://3.131.99.16:8081/repository/boa-snapshot/
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://18.191.153.210:9000/</sonar.host.url>
-		<sonar.login>ifemidetech</sonar.login>  
-		<sonar.login>2e9dbc7921658cd55fdd8e50202da3ff001dd41f</sonar.login>
+		<sonar.host.url>http://3.145.120.48:9000/ </sonar.host.url>
+		<sonar.login>admin</sonar.login>  
+		<sonar.login>accd218022188752fa4ef76763d05ac9c3693837</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -270,26 +95,26 @@ http://3.131.99.16:8081/repository/boa-snapshot/
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name>jenkins-class21-repo Releases Nexus Repository</name>
-	      <url>http://3.135.236.34:8081/repository/kayode-jenkins-release/</url>
+	      <name>LION TECH ACADEMY Releases Nexus Repository</name>
+	      <url> http://18.218.161.80:8081/repository/jenkins-class21-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>jenkins-class21-repo Snapshot Nexus Repository</name>
-	      <url>http://3.135.236.34:8081/repository/kayode-jenkins-snapshots/</url>
+	      <name>LION TECH ACADEMY Snapshot Nexus Repository </name>
+	      <url> http://18.218.161.80:8081/repository/liontech-web-apps-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
 	
 	<build>
-		<finalName>olubiyi-family-mobile-app</finalName>
+		<finalName>LIONTECH-ACADEMY-DEVOPS-Class-of-Grace</finalName>
 		
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.9.5</version>
+				<version>3.3</version>
 				<configuration>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
@@ -311,7 +136,7 @@ http://3.131.99.16:8081/repository/boa-snapshot/
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>3.9.5</version>
+				<version>2.9</version>
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>
@@ -325,4 +150,3 @@ http://3.131.99.16:8081/repository/boa-snapshot/
 	
 	
 </project>
--->
