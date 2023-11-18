@@ -1,0 +1,35 @@
+node('slave_1'){
+    def maveHome = tool name: "maven3.9.5"
+         echo "GitHub BranchName ${env.BRANCH_NAME}"
+         echo "Jenkins Job Number ${env.BUILD_NUMBER}"
+         echo "Jenkins Node Name  ${env.NODE_NAME}"
+         echo "Jenkins Home  ${env.JENKINS_HOME}"
+         echo "Jenkins URL   ${env.JENKINS_URL}"
+         echo "JOB  Name  ${env.JOB_NAME}" 
+
+stage('clonefromscm'){
+   git branch: 'prof2', credentialsId: 'lion14', url: 'https://github.com/Lion-Technology-Solutions/liontech-web-app-jenkins-cicd.git' 
+   //git credentialsId: 'JENKINS-PAT', url: 'https://github.com/Lion-Technology-Solutions/liontech-web-app-jenkins-cicd.git'
+  // git branch: 'uat', credentialsId: 'JENKINS-PAT', url: 'https://github.com/Lion-Technology-Solutions/liontech-web-app-jenkins-cicd.git'
+}
+stage('MavenBuild'){
+    sh  "${maveHome}/bin/mvn  clean package"
+}
+stage('SonarqubeAnalysis'){
+    sh  "${maveHome}/bin/mvn  sonar:sonar"
+
+}
+
+stage('Nexusupload'){
+    sh  "${maveHome}/bin/mvn  deploy"
+}
+
+stage('TomcatDeployment'){
+    deploy adapters: [tomcat9(credentialsId: 'tomcat-deployer', path: '', url: 'http://3.145.120.48:8009/')], contextPath: 'nov11-deployment', war: 'target/*.war'
+}
+
+
+
+
+
+}
